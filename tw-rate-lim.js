@@ -1,5 +1,7 @@
 if(process.argv[2]) {
     var auth = JSON.parse(require('fs').readFileSync(process.argv[2]));
+    if(process.argv[3])
+        auth = auth[process.argv[3]];
     require('twitter-js')(auth.consumerKey, auth.consumerSecret).apiCall('GET', '/account/rate_limit_status.json', 
                             { token: { oauth_token_secret: auth.token.oauth_token_secret, oauth_token: auth.token.oauth_token}},
         function(error, rl) {
