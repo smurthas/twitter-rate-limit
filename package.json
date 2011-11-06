@@ -1,0 +1,13 @@
+{
+    "name": "twitter-rate-limit",
+    "description": "twitter rate limit in json",
+    "version": "0.0.0",
+    "homepage": "https://github.com/smurthas/twitter-rate-limit",
+    "engines": {
+        "node": ">= 0.4.6  <=0.4.99999"
+    },
+    "dependencies": {
+        "twitter-js":"=0.1.0",
+        "request":"=2.1.1"
+    }
+}
